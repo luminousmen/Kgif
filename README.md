@@ -27,3 +27,6 @@ $ git clone https://github.com/luminousmen/Kgif
 $ delay=5 ./kgif.sh 
 ```
 
+### Preview
+
+![preview](terminal.gif)
