@@ -11,7 +11,7 @@ ctrlc() {
 	echo "Converting to gif..."
 	convert -delay $GIF_DELAY -loop 0 *.png terminal.gif
 	clean
-	
+	cd ..
 	exit 2
 }
 
@@ -21,6 +21,7 @@ clean() {
 
 capturing() {
 	echo "Capturing..."
+	cd ./pics
 	while true
 	do
 		scrot -u -d $SCROT_DELAY
@@ -31,8 +32,8 @@ capturing() {
 # main()
 trap "ctrlc" 2
 
-if [ ! -d ~/pics ]; then
-	mkdir ~/pics
+if [ ! -d ./pics ]; then
+	mkdir ./pics
 fi
 
 # if no delay passing
