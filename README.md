@@ -18,6 +18,7 @@ Originally it was created for capturing tty output and creating preview for gith
 
 ```bash
 $ sudo apt-get install imagemagick && sudo apt-get install scrot
+$ git clone https://github.com/luminousmen/Kgif
 ```
 
 ### Usage
@@ -25,3 +26,4 @@ $ sudo apt-get install imagemagick && sudo apt-get install scrot
 ```bash
 $ delay=5 ./kgif.sh 
 ```
+
