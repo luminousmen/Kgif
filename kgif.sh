@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # capturing delay
-SCROT_DELAY=0.2
+SCROT_DELAY=0.5
 # delay in gif
 GIF_DELAY=10
 
@@ -10,6 +10,7 @@ ctrlc() {
 
 	echo "Converting to gif..."
 	convert -delay $GIF_DELAY -loop 0 *.png terminal.gif
+	echo "Done!"
 	clean
 	cd ..
 	exit 2
