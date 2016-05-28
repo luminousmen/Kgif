@@ -8,7 +8,7 @@ Originally it was created for capturing tty output and creating preview for gith
 :grimacing:
 
 
-### Dependency
+### Dependencies
 
 * scrot
 * imagemagick
