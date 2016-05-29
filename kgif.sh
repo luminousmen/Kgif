@@ -4,25 +4,32 @@
 SCROT_DELAY=0.5
 # delay in gif
 GIF_DELAY=10
+# clean tmp directory
+noclean=true
 
 ctrlc() {
-	echo "Stop capturing"
+	echo "\nStop capturing"
 
 	echo "Converting to gif..."
-	convert -delay $GIF_DELAY -loop 0 *.png terminal.gif
-	echo "Done!"
-	clean
+	convert -quiet -delay $GIF_DELAY -loop 0 *.png ../terminal.gif
 	cd ..
+
+	if [ "$noclean" = true ] ; then
+		echo "Cleaning..."
+		clean
+	fi
+
+	echo "Done!"
 	exit 2
 }
 
 clean() {
-	rm *.png
+	rm -rf $NOW
 }
 
 capturing() {
 	echo "Capturing..."
-	cd ./pics
+	cd ./$NOW
 	while true
 	do
 		scrot -u -d $SCROT_DELAY
@@ -33,8 +40,9 @@ capturing() {
 # main()
 trap "ctrlc" 2
 
-if [ ! -d ./pics ]; then
-	mkdir ./pics
+NOW=$(date +"%m-%d-%Y_%H:%M:%S")
+if [ ! -d ./$NOW ]; then
+	mkdir ./$NOW
 fi
 
 # if no delay passing
