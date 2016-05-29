@@ -5,7 +5,6 @@ SCROT_DELAY=0.5
 # delay in gif
 GIF_DELAY=10
 # clean tmp directory
-noclean=true
 
 ctrlc() {
 	echo "\nStop capturing"
@@ -14,7 +13,7 @@ ctrlc() {
 	convert -quiet -delay $GIF_DELAY -loop 0 *.png ../terminal.gif
 	cd ..
 
-	if [ "$noclean" = true ] ; then
+	if [ "$noclean" = false ] ; then
 		echo "Cleaning..."
 		clean
 	fi
@@ -48,6 +47,10 @@ fi
 # if no delay passing
 if test -z "$delay" ; then
 	$delay = 1
+fi
+
+if test -z "$noclean" ; then
+	$noclean = false
 fi
 
 # wait for a while

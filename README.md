@@ -5,8 +5,8 @@ Tool for creating gif file from capturing active window.
 
 Originally it was created for capturing tty output and creating preview for github projects :wink:
 
-:grimacing:
 
+First I came up to is using ```ttyrec``` with [ttygif](https://github.com/icholy/ttygif) or [tty2gif](https://bitbucket.org/antocuni/tty2gif) convertor, then find [showterm.io](http://showterm.io/). All this solutions didn't work for me :grimacing:
 
 ### Dependencies
 
@@ -30,3 +30,6 @@ $ delay=5 ./kgif.sh
 ### Preview
 
 ![preview](terminal.gif)
+
+
+![gif](https://camo.githubusercontent.com/38df9b507042dded48415dbb5a5a3c4966ea324c/687474703a2f2f692e696d6775722e636f6d2f3965743864614e2e6a7067)
