@@ -2,6 +2,7 @@ Kgif
 ======
 
 Tool for creating gif file from capturing active window.
+
 ![gif](https://camo.githubusercontent.com/38df9b507042dded48415dbb5a5a3c4966ea324c/687474703a2f2f692e696d6775722e636f6d2f3965743864614e2e6a7067)
 
 Originally it was created for capturing tty output and creating preview for github projects :wink:
