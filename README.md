@@ -1,3 +1,6 @@
+[![FBI](https://img.shields.io/badge/%F0%9F%95%B5-FBI%20checked-green.svg)](https://www.fbi.gov/)
+[![bug free](https://img.shields.io/badge/%F0%9F%90%9B-bug%20free-green.svg)](https://en.wikipedia.org/wiki/Software_bug)
+
 Kgif
 ======
 
