@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # capturing delay
 SCROT_DELAY=0.5
@@ -37,7 +37,7 @@ capturing() {
 
 
 # main()
-trap "ctrlc" 2
+trap "ctrlc" SIGINT SIGTERM
 
 NOW=$(date +"%m-%d-%Y_%H:%M:%S")
 if [ ! -d ./$NOW ]; then
@@ -46,11 +46,11 @@ fi
 
 # if no delay passing
 if test -z "$delay" ; then
-	$delay = 1
+	delay=1
 fi
 
 if test -z "$noclean" ; then
-	$noclean = false
+	noclean=false
 fi
 
 # wait for a while
