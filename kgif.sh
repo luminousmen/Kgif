@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # capturing delay
 SCROT_DELAY=0.5
@@ -37,7 +37,7 @@ capturing() {
 
 
 # main()
-trap "ctrlc" SIGINT SIGTERM
+trap "ctrlc" INT TERM
 
 NOW=$(date +"%m-%d-%Y_%H:%M:%S")
 if [ ! -d ./$NOW ]; then
