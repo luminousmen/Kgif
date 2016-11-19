@@ -28,17 +28,27 @@ $ git clone https://github.com/luminousmen/Kgif
 
 ### Usage
 
-Set ```delay``` in seconds to specify how long script will wait until start capturing.
 ```bash
-$ delay=5 ./kgif.sh 
+$ ./kgif.sh --help
+usage: ./kgif.sh [--delay] [--noclean] [--check] [-h]
+  -h, --help                   Show this help, exit
+      --check                  Check if all dependencies are installed, exit
+      --delay                  Set delay in seconds to specify how long script will wait until start capturing.
+      --noclean                Set if you don't want to delete source *.png screenshots.
+
 ```
 
-Set ```onclean``` if you don't want to delete source png screenshots (for example if you want to delete some of the screenshots).
+
+Set ```delay``` in seconds to specify how long script will wait until start capturing.
 ```bash
-$ onclean=true delay=5 ./kgif.sh 
+$ ./kgif.sh --delay=5
+```
+
+Set ```noclean``` if you don't want to delete source png screenshots (for example if you want to delete some of the screenshots).
+```bash
+$ ./kgif.sh --delay=5 --noclean
 ```
 
 ### Preview
 
 ![preview](terminal.gif)
-
