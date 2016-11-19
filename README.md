@@ -30,10 +30,12 @@ $ git clone https://github.com/luminousmen/Kgif
 
 ```bash
 $ ./kgif.sh --help
-usage: ./kgif.sh [--delay] [--noclean] [--check] [-h]
+usage: ./kgif.sh [--delay] [--filename ] [--gifdelay] [--noclean] [--check] [-h]
   -h, --help                   Show this help, exit
       --check                  Check if all dependencies are installed, exit
-      --delay                  Set delay in seconds to specify how long script will wait until start capturing.
+      --delay=<sec>            Set delay in seconds to specify how long script will wait until start capturing.
+      --gifdelay=<sec>         Set delay in seconds to specify how fast images appears in gif.
+      --filename=<file name>   Set file name for output gif.
       --noclean                Set if you don't want to delete source *.png screenshots.
 
 ```
