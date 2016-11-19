@@ -40,6 +40,10 @@ usage: ./kgif.sh [--delay] [--filename ] [--gifdelay] [--noclean] [--check] [-h]
 
 ```
 
+Check if all dependencies presents in system:
+```bash
+$ ./kgif.sh --check
+```
 
 Set ```delay``` in seconds to specify how long script will wait until start capturing.
 ```bash

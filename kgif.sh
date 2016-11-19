@@ -25,6 +25,7 @@
 # DAMAGE.
 
 
+NOCLEAN=false
 # capturing delay
 SCROT_DELAY=0.5
 # delay in gif
@@ -131,10 +132,6 @@ fi
 # if no delay passing
 if test -z "$DELAY" ; then
     DELAY=1
-fi
-
-if [ "$NOCLEAN" = true ] ; then
-    NOCLEAN=false
 fi
 
 echo "Setting delay to $DELAY sec"
