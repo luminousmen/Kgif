@@ -22,7 +22,7 @@ I needed to capture tty output on my Ubuntu 15.10. First I came up to using ```t
 ### Installation
 
 ```bash
-$ sudo apt-get install imagemagick && sudo apt-get install scrot
+$ sudo apt-get install imagemagick scrot
 $ git clone https://github.com/luminousmen/Kgif
 ```
 
