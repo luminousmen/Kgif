@@ -46,10 +46,10 @@ usage() {
 }
 
 ctrlc() {
-    echo "\nStop capturing"
+    printf "\\nStop capturing"
 
     echo "Converting to gif..."
-    convert -quiet -delay $GIF_DELAY -loop 0 *.png ../$GIF_FILENAME
+    convert -quiet -delay $GIF_DELAY -loop 0 -- *.png ../$GIF_FILENAME
     cd ..
 
     if [ "$NOCLEAN" = false ] ; then
@@ -62,12 +62,12 @@ ctrlc() {
 }
 
 clean() {
-    rm -rf $NOW
+    rm -rf "$NOW"
 }
 
 capturing() {
     echo "Capturing..."
-    cd ./$NOW
+    cd ./"$NOW" || exit
     while true
     do
         scrot -u -d $SCROT_DELAY
@@ -81,8 +81,8 @@ dependency_check() {
 }
 
 while [ "$1" != "" ]; do
-    PARAM=`echo $1 | awk -F= '{print $1}'`
-    VALUE=`echo $1 | awk -F= '{print $2}'`
+    PARAM=$(echo "$1" | awk -F= '{print $1}')
+    VALUE=$(echo "$1" | awk -F= '{print $2}')
     case $PARAM in
         -h | --help)
             usage
@@ -125,8 +125,8 @@ fi
 trap "ctrlc" INT TERM
 
 NOW=$(date +"%m-%d-%Y_%H:%M:%S")
-if [ ! -d ./$NOW ]; then
-    mkdir ./$NOW
+if [ ! -d ./"$NOW" ]; then
+    mkdir ./"$NOW"
 fi
 
 # if no delay passing
